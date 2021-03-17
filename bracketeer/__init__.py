@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw
 from .slot_coordinates import slot_coordinates
 
 
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 ID = 'id'
 PRED = 'pred'
@@ -41,7 +41,7 @@ def build_bracket(outputPath='output.png',
                   slotsPath='data/TourneySlots.csv',
                   submissionPath='data/submit.csv',
                   resultsPath=None,
-                  year=2017):
+                  year=2021):
 
     assert os.path.isfile(teamsPath), '{} is not a valid file path for teamsPath.'.format(teamsPath)
     assert os.path.isfile(seedsPath), '{} is not a valid file path for seedsPath.'.format(seedsPath)
@@ -150,7 +150,7 @@ def build_bracket(outputPath='output.png',
     # Create data for writing to image
     slotdata = []
     for ix, key in enumerate([b for a in bkt.levels for b in a]):
-        xy = slot_coordinates[2017][max(slot_coordinates[2017].keys()) - ix]
+        xy = slot_coordinates[2021][max(slot_coordinates[2021].keys()) - ix]
         pred = ''
         gid = ''
         if key.parent is not None:
