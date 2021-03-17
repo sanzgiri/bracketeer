@@ -3,7 +3,7 @@
 # then first round by section of the bracket W, X, Y, Z, from top to bottom
 # then second round games for W, X, Y, and Z and so on
 slot_coordinates = {
-    2017: {1: (372, 32),# First four
+    2021: {1: (372, 32),# First four
          2: (372, 50),
          3: (30, 328),
          4: (30, 346),
